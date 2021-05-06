@@ -61,6 +61,13 @@ get_header();
 			endwhile;?>
 			</section> <!-- fin section cours -->
 
+			<!-- section formulaire d'une catégorie nouvelle -->
+			<section class="admin-rapid">
+			<h3>ajouter une article de catégorie "Nouvelles" </h3>
+			<input type="text" name="title" placeholder="Titre">
+			<textarea name="content" placeholder="Contenu"></textarea>
+			<button id='bout-rapide'> Créer une Nouvelle </button>
+			</section>
 			<!-- section Nouvelles -->
 			<section class="nouvelles">
 			<button id="bout_nouvelles">Dernières Nouvelles</button>

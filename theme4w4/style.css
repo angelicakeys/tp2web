@@ -1363,6 +1363,23 @@ Liste des blocs de cours par type_de_cours
   }
 }
 
+/*SECTION NOUVELLES*/
+/* section.nouvelles{
+    section{
+       .wp-block-columns{
+        .wp-block-column{
+           
+              .blocks-gallerycolumns-1is-cropped{
+                  .blocks-gallery-grid{
+                    .blocks-gallery-item{
+                        margin: 0;
+                    }
+                  }
+              }
+        }
+        }
+    }
+} */
 /* local carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1691,4 +1708,7 @@ La barre du millieu
   justify-content: center;
   margin: 0;
 }
+
+/* local formulaire
+--------------------------------------------- */
 /*# sourceMappingURL=style.css.map */
