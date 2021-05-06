@@ -4,9 +4,10 @@
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-areas:
-			"header"
-			"main"
-			"footer";
+			"header header"
+			"main main"
+			"footer footer";
+		
 	}
 }
 
@@ -29,16 +30,17 @@
 /****AJOUT*****/
 
 .site-footer, #colophon{
-	display: flex;
-	justify-content: center;
-	flex: 1;
+	display: grid;
+	grid-area: "footer";
+	/* justify-content: center; */
+/* 	flex: 1; */
 	background-color: rgb(74, 133, 211);
 	width: 100vw;
 	height: auto;
 	color: black;
 	margin: 0;
-	.site-info{
+	/* .site-info{
 		padding-top: 15px;
-	}
+	} */
 	
 }

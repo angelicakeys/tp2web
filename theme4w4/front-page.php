@@ -61,6 +61,7 @@ get_header();
 			endwhile;?>
 			</section> <!-- fin section cours -->
 
+			<?php if (current_user_can('administrator')) : ?> 
 			<!-- section formulaire d'une catégorie nouvelle -->
 			<section class="admin-rapid">
 			<h3>ajouter une article de catégorie "Nouvelles" </h3>
@@ -68,12 +69,13 @@ get_header();
 			<textarea name="content" placeholder="Contenu"></textarea>
 			<button id='bout-rapide'> Créer une Nouvelle </button>
 			</section>
+			
+			<?php endif; ?>
 			<!-- section Nouvelles -->
 			<section class="nouvelles">
 			<button id="bout_nouvelles">Dernières Nouvelles</button>
 			<section> </section>
 			</section>
-
 		<?php endif; ?>
 
 
@@ -82,7 +84,7 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
 
 function convertirTableau(&$tPropriété)

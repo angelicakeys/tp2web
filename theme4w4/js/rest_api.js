@@ -22,6 +22,8 @@
                for (const elm of data){
                 chaine += '<h2>' + elm.title.rendered + '</h2>'
                 chaine += elm.content.rendered 
+               /*  chaine += '<p>' + elm.date + '<p>'  */
+               /*  '<p class= "date">' */
                }
                nouvelles.innerHTML = chaine;
             }

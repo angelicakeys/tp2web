@@ -1,7 +1,7 @@
 body.home{
     background-color : #fff;
 /*     height : 500vh; */
-height: 100vh;
+    height: 100vh;
     width : 100vw;
     overflow-x :hidden;
     #primary{
@@ -69,9 +69,7 @@ body.home::after{
     font-size : clamp(.6rem, #{"-0.875rem + 8.333vw"},3rem);
 }
 
-.site-footer{
-   /*  height: 50px */
-}
+
 /**AJOUT ESPACE ENTRE LE TITRE ET LE MENU*****/
 h1.page-title{
     margin-top: 50px;
@@ -223,19 +221,18 @@ Liste des blocs de cours par type_de_cours
  
 
 /*SECTION NOUVELLES*/
-/* section.nouvelles{
+section.nouvelles{
+   
+    background-color: aquamarine;
+    margin-top: 70px;
+    padding: 40px;
+    margin: 0px;
     section{
-       .wp-block-columns{
-        .wp-block-column{
-           
-              .blocks-gallerycolumns-1is-cropped{
-                  .blocks-gallery-grid{
-                    .blocks-gallery-item{
-                        margin: 0;
-                    }
-                  }
-              }
-        }
+        h2{
+            background-color: turquoise;
         }
     }
-} */
+    .blocks-gallery-item{
+        margin-left: 70px;
+    }
+}

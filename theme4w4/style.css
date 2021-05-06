@@ -699,7 +699,7 @@ textarea {
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header header" "main main" "footer footer";
 }
 
 /*
@@ -718,18 +718,18 @@ textarea {
 
 /****AJOUT*****/
 .site-footer, #colophon {
-  display: flex;
-  justify-content: center;
-  flex: 1;
+  display: grid;
+  grid-area: "footer";
+  /* justify-content: center; */
+  /* 	flex: 1; */
   background-color: #4a85d3;
   width: 100vw;
   height: auto;
   color: black;
   margin: 0;
-}
-
-.site-footer .site-info, #colophon .site-info {
-  padding-top: 15px;
+  /* .site-info{
+		padding-top: 15px;
+	} */
 }
 
 /*--------------------------------------------------------------
@@ -1207,10 +1207,6 @@ body.home::after {
   font-size: clamp(0.6rem, -0.875rem + 8.333vw, 3rem);
 }
 
-.site-footer {
-  /*  height: 50px */
-}
-
 /**AJOUT ESPACE ENTRE LE TITRE ET LE MENU*****/
 h1.page-title {
   margin-top: 50px;
@@ -1364,22 +1360,21 @@ Liste des blocs de cours par type_de_cours
 }
 
 /*SECTION NOUVELLES*/
-/* section.nouvelles{
-    section{
-       .wp-block-columns{
-        .wp-block-column{
-           
-              .blocks-gallerycolumns-1is-cropped{
-                  .blocks-gallery-grid{
-                    .blocks-gallery-item{
-                        margin: 0;
-                    }
-                  }
-              }
-        }
-        }
-    }
-} */
+section.nouvelles {
+  background-color: aquamarine;
+  margin-top: 70px;
+  padding: 40px;
+  margin: 0px;
+}
+
+section.nouvelles section h2 {
+  background-color: turquoise;
+}
+
+section.nouvelles .blocks-gallery-item {
+  margin-left: 70px;
+}
+
 /* local carrousel
 --------------------------------------------- */
 .carrousel {
