@@ -671,6 +671,31 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  /* grid-template-columns: auto ($size__site-sidebar); */
+  grid-template-columns: 80% 20%;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden;
+  /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+  grid-area: sidebar;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -698,7 +723,8 @@ textarea {
   flex: 1;
   background-color: #4a85d3;
   width: 100vw;
-  color: white;
+  height: auto;
+  color: black;
   margin: 0;
 }
 
@@ -1182,7 +1208,7 @@ body.home::after {
 }
 
 .site-footer {
-  height: 50px;
+  /*  height: 50px */
 }
 
 /**AJOUT ESPACE ENTRE LE TITRE ET LE MENU*****/
@@ -1656,5 +1682,13 @@ La barre du millieu
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+}
+
+/* local footer
+--------------------------------------------- */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

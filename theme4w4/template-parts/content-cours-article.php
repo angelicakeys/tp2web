@@ -11,6 +11,7 @@ global $tPropriété;
 
 
 <article>
+
 <div class="divArticle"> <!-- class hover animation -->
 	<p><?php echo $tPropriété['sigle'] . " - " . $tPropriété['typeCours'] . " - " . $tPropriété['nbHeure'] ; ?></p>
 	<a href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>

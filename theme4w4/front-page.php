@@ -35,7 +35,7 @@ get_header();
 				if ($tPropriété['typeCours'] != $precedent): 
 					if ("XXXXXX" != $precedent)	: ?>
 						</section>
-						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique'])) : ?>
+						<?php if (in_array($precedent, ['Web', 'Jeu'])) : ?>
 							<section class="ctrl-carrousel">
 								<?php echo $chaine_bouton_radio;
 								$chaine_bouton_radio = '';
@@ -44,18 +44,29 @@ get_header();
 						<?php endif; ?>
 					<?php endif; ?>	
 					<h2><?php echo $tPropriété['typeCours'] ?></h2>
-					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ? 'class="carrousel-2"':'class="bloc"'); ?>>
+					
+					<section  <?php echo class_bloc($tPropriété['typeCours']); ?>>
 				<?php endif ?>	
 
-				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ) : 
+				<?php if (in_array($tPropriété['typeCours'], ["Web", "Jeu"]) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
-				else :		
+						elseif($tPropriété['typeCours']== 'Projets'): 
+						get_template_part( 'template-parts/content', 'galerie' ); 
+						
+						else :		
 						get_template_part( 'template-parts/content', 'cours-article' ); 
 				endif;	
 				$precedent = $tPropriété['typeCours'];
 			endwhile;?>
 			</section> <!-- fin section cours -->
+
+			<!-- section Nouvelles -->
+			<section class="nouvelles">
+			<button id="bout_nouvelles">Dernières Nouvelles</button>
+			<section> </section>
+			</section>
+
 		<?php endif; ?>
 
 
@@ -88,3 +99,15 @@ function convertirTableau(&$tPropriété)
 	$tPropriété['session'] = substr($tPropriété['titre'], 4,1);
 	$tPropriété['typeCours'] = get_field('type_de_cours');
 }
+
+
+	function class_bloc ($type){
+		if (in_array($type, ["Web", "Jeu"]) ){
+			return ('class="carrousel-2"'); 
+		} elseif($type == 'Projets'){
+				return ('class="galerie"');
+			}
+			else{
+				return ('class="bloc"');
+			}
+		}

@@ -133,6 +133,18 @@ function theme4w4_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Pied de Page', 'theme4w4' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here.', 'theme4w4' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'theme4w4_widgets_init' );
 
@@ -159,10 +171,12 @@ function theme4w4_scripts() {
 	
 //	wp_register_script( 'theme4w4-carrousel', get_template_directory_uri() . '/js/carrousel.js', array(), filemtime(get_template_directory() . "/js/carrousel.js"), true );
 	wp_register_script( 'theme4w4-slider', get_template_directory_uri() . '/js/slider.js', array(), filemtime(get_template_directory() . "/js/slider.js"), true );
-	
+	wp_register_script( 'theme4w4-rest-api', get_template_directory_uri() . '/js/rest_api.js', array(), filemtime(get_template_directory() . "/js/rest_api.js"), true );
+
 	if( is_front_page()){
 	//	wp_enqueue_script( 'theme4w4-carrousel');
 		wp_enqueue_script( 'theme4w4-slider');
+		wp_enqueue_script( 'theme4w4-rest-api');
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
