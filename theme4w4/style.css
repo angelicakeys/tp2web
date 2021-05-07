@@ -1259,6 +1259,18 @@ Liste des blocs de cours par type_de_cours
   background-color: #171266;
 }
 
+.home .cours h2:nth-of-type(6) {
+  background-color: #dbe644;
+}
+
+.home .cours h2:nth-of-type(7) {
+  background-color: #f0710a;
+}
+
+.home .cours h2:nth-of-type(8) {
+  background-color: #83087d;
+}
+
 .home .cours section.bloc {
   display: flex;
   flex-direction: row;
@@ -1359,7 +1371,7 @@ Liste des blocs de cours par type_de_cours
   }
 }
 
-/*SECTION NOUVELLES*/
+/**************SECTION NOUVELLES**********************************************/
 section.nouvelles {
   background-color: aquamarine;
   margin-top: 70px;
@@ -1367,7 +1379,11 @@ section.nouvelles {
   margin: 0px;
 }
 
-section.nouvelles section h2 {
+section.nouvelles section {
+  width: 50vw;
+}
+
+section.nouvelles section h2:nth-of-type(3) {
   background-color: turquoise;
 }
 

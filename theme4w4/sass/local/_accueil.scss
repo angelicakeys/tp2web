@@ -113,6 +113,17 @@ Liste des blocs de cours par type_de_cours
         &:nth-of-type(5){
             background-color: rgb(23, 18, 102);
         }
+
+        &:nth-of-type(6){
+            background-color: rgb(219, 230, 68);
+        }
+
+        &:nth-of-type(7){
+            background-color: rgb(240, 113, 10);
+        }
+        &:nth-of-type(8){
+            background-color: rgb(131, 8, 125);
+        }
         
     }
 
@@ -220,16 +231,19 @@ Liste des blocs de cours par type_de_cours
 
  
 
-/*SECTION NOUVELLES*/
+/**************SECTION NOUVELLES**********************************************/
 section.nouvelles{
    
     background-color: aquamarine;
     margin-top: 70px;
     padding: 40px;
     margin: 0px;
+    
     section{
-        h2{
+        width: 50vw;
+        h2:nth-of-type(3){
             background-color: turquoise;
+           
         }
     }
     .blocks-gallery-item{
