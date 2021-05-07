@@ -1380,7 +1380,12 @@ section.nouvelles {
 }
 
 section.nouvelles section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
+  margin: 90px;
 }
 
 section.nouvelles section h2:nth-of-type(3) {

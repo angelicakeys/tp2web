@@ -232,15 +232,26 @@ Liste des blocs de cours par type_de_cours
  
 
 /**************SECTION NOUVELLES**********************************************/
+
+
 section.nouvelles{
    
+		
+		
     background-color: aquamarine;
     margin-top: 70px;
     padding: 40px;
     margin: 0px;
     
     section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 50vw;
+        margin: 90px;
+      
+
         h2:nth-of-type(3){
             background-color: turquoise;
            
