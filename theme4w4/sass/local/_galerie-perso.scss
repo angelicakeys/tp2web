@@ -6,13 +6,13 @@
 
 
 
-.galerie{
+.galerie-perso{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin:150px;
+    margin: 50px;
     
     
     .flip-card{
@@ -21,6 +21,7 @@
         height: 150px;
         perspective: 10000px;
         margin-left: 40px;
+        margin-right: 40px;
     }
     
     .flip-card-inner{

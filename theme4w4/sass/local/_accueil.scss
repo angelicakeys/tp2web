@@ -47,23 +47,9 @@ body.home::after{
 
 } 
 
-.site-title {
 
-    font-family: $font__sitetitle ;
-    font-weight: bold;
-    font-size: clamp(1rem, #{"-0.875rem + 8.333vw"},3rem);
-    margin-bottom: 0;
-    a {
-        text-decoration: none;
-    }
-}
 
-/* .site-description {
-    margin-top : 0;
-    font-family: $font__sitetitle ;
-    font-weight: normal;
-    font-size: clamp(.6rem, #{"-0.875rem + 8.333vw"},1.5rem);
-} */
+
 
 .home .entry-header {
     font-size : clamp(.6rem, #{"-0.875rem + 8.333vw"},3rem);

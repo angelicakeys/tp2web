@@ -12,6 +12,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+
+
 if ( ! function_exists( 'theme4w4_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -20,6 +22,8 @@ if ( ! function_exists( 'theme4w4_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+
+	 
 	function theme4w4_setup() {
 		/*
 		 * Make theme available for translation.
@@ -46,6 +50,9 @@ if ( ! function_exists( 'theme4w4_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		
+		/* add_image_size( 'category-thumb', 600, 9999 ); */
+		
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(

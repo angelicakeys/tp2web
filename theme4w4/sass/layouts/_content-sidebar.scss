@@ -1,12 +1,21 @@
 .site {
 	display: grid;
 	/* grid-template-columns: auto ($size__site-sidebar); */
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"header header"
+		"main main"
+		"sidebar sidebar"
+		"footer footer";
+
+	@include desktop{
 	grid-template-columns: 80% 20%;
 	grid-template-areas:
 		"header header"
 		"main sidebar"
 		"footer footer";
-	
+	}
+
 }
 
 .site-header {
@@ -20,6 +29,10 @@
 
 .widget-area {
 	grid-area: sidebar;
+	background-color: rgb(164, 190, 190);
+	padding-top: 30%;
+	padding-left: 5%;
+
 }
 
 .site-footer {

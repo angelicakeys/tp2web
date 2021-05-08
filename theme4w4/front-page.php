@@ -117,7 +117,7 @@ function convertirTableau(&$tPropriété)
 				return ('class="galerie"');
 			}
 			elseif($type == 'Personnel'){
-				return ('class="galerie"');
+				return ('class="galerie-perso"');
 			}
 			else{
 				return ('class="bloc"');
