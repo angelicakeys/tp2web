@@ -219,7 +219,18 @@ Liste des blocs de cours par type_de_cours
 
 /**************SECTION NOUVELLES**********************************************/
 
-
+section.admin-rapid{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:column;
+    width: 50%;
+    margin-left: 80px;
+   
+    border: 4px solid rgb(65, 65, 148);
+    #bout-rapide:hover{
+        background-color: rgb(134, 179, 192);
+    }
+}
 section.nouvelles{
    
     background-color: aquamarine;

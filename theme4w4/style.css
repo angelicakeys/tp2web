@@ -1365,6 +1365,19 @@ Liste des blocs de cours par type_de_cours
 }
 
 /**************SECTION NOUVELLES**********************************************/
+section.admin-rapid {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 80px;
+  border: 4px solid #414194;
+}
+
+section.admin-rapid #bout-rapide:hover {
+  background-color: #86b3c0;
+}
+
 section.nouvelles {
   background-color: aquamarine;
   margin-top: 70px;
@@ -1752,7 +1765,7 @@ La barre du millieu
 .entry-header, .page-header {
   color: turquoise;
   padding-top: 40px;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .entry-header h1, .page-header h1 {
