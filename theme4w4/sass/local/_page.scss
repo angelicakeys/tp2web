@@ -22,10 +22,13 @@
     font-family: $font__sitetitle ;
     font-weight: normal;
     font-size: clamp(.6rem, #{"-0.875rem + 8.333vw"},1.5rem);
+  
 }
 
 .entry-header, .page-header{
     color: turquoise;
+    padding-top: 40px;
+    width: 50%;
     h1{
         font-size: 3rem;
         
@@ -34,4 +37,9 @@
     h2{
         font-size: 2rem;
     }
+}
+.entry-content{
+p{
+    width: 70%;
+}
 }

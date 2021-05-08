@@ -699,7 +699,7 @@ textarea {
   grid-area: sidebar;
   background-color: #a4bebe;
   padding-top: 30%;
-  padding-left: 5%;
+  padding: 10%;
 }
 
 .site-footer {
@@ -1751,6 +1751,8 @@ La barre du millieu
 
 .entry-header, .page-header {
   color: turquoise;
+  padding-top: 40px;
+  width: 50%;
 }
 
 .entry-header h1, .page-header h1 {
@@ -1759,6 +1761,10 @@ La barre du millieu
 
 .entry-header h2, .page-header h2 {
   font-size: 2rem;
+}
+
+.entry-content p {
+  width: 70%;
 }
 
 /* local galerie perso 
