@@ -232,10 +232,14 @@ section.admin-rapid{
     }
 }
 section.nouvelles{
-   
+   #bout_nouvelles{
+       display: none;
+   } 
+   display: flex;
+   justify-content: center;
     background-color: aquamarine;
     margin-top: 70px;
-    padding: 40px;
+    //padding: 40px;
     margin: 0px;
     
     section{
@@ -243,15 +247,16 @@ section.nouvelles{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50vw;
+        width: 80vw;
         margin: 90px;
-      
+     @include desktop{
+        width: 50vw;
+     }
 
-        h2:nth-of-type(3){
-            background-color: turquoise;
-           
-        }
+
     }
+
+
     .blocks-gallery-item{
         margin-left: 70px;
     }

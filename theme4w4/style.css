@@ -1405,10 +1405,15 @@ section.admin-rapid #bout-rapide:hover {
 }
 
 section.nouvelles {
+  display: flex;
+  justify-content: center;
   background-color: aquamarine;
   margin-top: 70px;
-  padding: 40px;
   margin: 0px;
+}
+
+section.nouvelles #bout_nouvelles {
+  display: none;
 }
 
 section.nouvelles section {
@@ -1416,12 +1421,14 @@ section.nouvelles section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 80vw;
   margin: 90px;
 }
 
-section.nouvelles section h2:nth-of-type(3) {
-  background-color: turquoise;
+@media (min-width: 1200px) {
+  section.nouvelles section {
+    width: 50vw;
+  }
 }
 
 section.nouvelles .blocks-gallery-item {
