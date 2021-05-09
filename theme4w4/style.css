@@ -529,7 +529,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 a:visited {
@@ -1406,33 +1406,48 @@ section.admin-rapid #bout-rapide:hover {
 
 section.nouvelles {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   background-color: aquamarine;
   margin-top: 70px;
   margin: 0px;
+  /*   .blocks-gallery-item{
+       // margin-left: 70px;
+    } */
 }
 
 section.nouvelles #bout_nouvelles {
   display: none;
 }
 
-section.nouvelles section {
+section.nouvelles section.boite {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80vw;
   margin: 90px;
+  /*     .wp-blocks-columns{
+        display: flex;
+         flex-direction: row;
+         .wp-blocks-column{
+           
+             flex-direction: row;
+             p{
+                 flex-direction: column;
+             }
+         } */
+  /*  } */
+}
+
+section.nouvelles section.boite h2 {
+  background-color: none;
 }
 
 @media (min-width: 1200px) {
-  section.nouvelles section {
+  section.nouvelles section.boite {
     width: 50vw;
   }
-}
-
-section.nouvelles .blocks-gallery-item {
-  margin-left: 70px;
 }
 
 /* local carrousel

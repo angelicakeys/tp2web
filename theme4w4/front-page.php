@@ -74,7 +74,7 @@ get_header();
 			<!-- section Nouvelles -->
 			<section class="nouvelles">
 			<button id="bout_nouvelles">Dernières Nouvelles</button>
-			<section> </section>
+			<section class="boite"> </section>
 			</section>
 		<?php endif; ?>
 
