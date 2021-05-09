@@ -2,6 +2,14 @@
 .site-footer {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     margin: 0;
-    
+
+/***** informations dans le footer mise à côté ****/
+   .site-info{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       gap: 10%;
+   }
 }

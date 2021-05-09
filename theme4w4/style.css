@@ -479,7 +479,8 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  /* margin: 0 0 1.5em 3em; */
+  margin: 0;
 }
 
 ul {
@@ -698,8 +699,33 @@ textarea {
 .widget-area {
   grid-area: sidebar;
   background-color: #a4bebe;
-  padding-top: 30%;
-  padding: 10%;
+  padding: 70px;
+}
+
+.widget-area .textwidget, .widget-area h2 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  /* 	margin: 50px; */
+  /* @include tablet{
+			padding:15%;
+		} */
+}
+
+@media (min-width: 1200px) {
+  .widget-area .textwidget, .widget-area h2 {
+    display: flex;
+    margin: 0px;
+    padding-top: 40px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .widget-area {
+    padding-top: 30%;
+    padding: 10%;
+  }
 }
 
 .site-footer {
@@ -1729,7 +1755,16 @@ La barre du millieu
 .site-footer {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   margin: 0;
+  /***** informations dans le footer mise à côté ****/
+}
+
+.site-footer .site-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10%;
 }
 
 /* local formulaire
