@@ -2,7 +2,7 @@
 /* --------------------------------------------------------------------------------------
 Les variables 
 ---------------------------------------------------------------------------------------- */
-$largeur-burger : 2rem;
+$largeur-burger : 2.5rem;
 $duree : .10s;
 $epaisseur : 8%;
 
@@ -15,8 +15,12 @@ Le bouton buger
     width:$largeur-burger ;
     height : $largeur-burger ;
     // border : 1px solid #aaa;
-    border-radius : 50%;
+    //border-radius : 50%;
     overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+   // clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+   
+   
     div{
         top: 0;
         left : 0;
@@ -29,11 +33,11 @@ Le bouton buger
             clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
         }
         &:nth-of-type(2){
-            background-color: rgb(61, 121, 218);
+            background-color: rgb(241, 245, 9);
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
         }
         &:nth-of-type(3){
-            background-color: rgb(218, 176, 61);
+            background-color: rgb(54, 10, 216);
             clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
         }
     }
@@ -44,9 +48,13 @@ La barre du haut
 @keyframes ouvreX1{
     0%{
         clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+       
     }
     100%{
-        clip-path: polygon($epaisseur  (-$epaisseur),  100%+$epaisseur 100%-$epaisseur ,100%-$epaisseur 100%+$epaisseur, -$epaisseur $epaisseur);
+        
+        // clip-path: polygon($epaisseur  (-$epaisseur),  100%+$epaisseur 100%-$epaisseur ,100%-$epaisseur 100%+$epaisseur, -$epaisseur $epaisseur);
+        $epaisseur : 20%;
+        clip-path: polygon( (-$epaisseur)  90%-$epaisseur,  90%-$epaisseur (-$epaisseur) , 90%+$epaisseur $epaisseur, $epaisseur 90%+$epaisseur);
     }
 }
 @keyframes fermeX1{
@@ -55,6 +63,7 @@ La barre du haut
     }
     100%{
          clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+        
     }
 }
 
@@ -74,15 +83,21 @@ La barre du bas
         clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
     }
     100%{
-        clip-path: polygon( (-$epaisseur)  100%-$epaisseur,  100%-$epaisseur (-$epaisseur) , 100%+$epaisseur $epaisseur, $epaisseur 100%+$epaisseur);
+        //clip-path: polygon( (-$epaisseur)  100%-$epaisseur,  100%-$epaisseur (-$epaisseur) , 100%+$epaisseur $epaisseur, $epaisseur 100%+$epaisseur);
+        $epaisseur : 10%;
+        clip-path: polygon( (-$epaisseur)  60%-$epaisseur,  60%-$epaisseur (-$epaisseur) , 60%+$epaisseur $epaisseur, $epaisseur 60%+$epaisseur);
     }
 }
 @keyframes fermeX3{
     0%{
         clip-path: polygon(-4%  96%,  96% -4% , 104% 4%, 4% 104%);
+       
+        
     }
     100%{
         clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+        
+        
     }
 }
 
@@ -102,7 +117,10 @@ La barre du millieu
         clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
     }
     100%{
-        clip-path: polygon(48%  48%,  52% 48% , 52% 52%, 48% 52%);
+        //clip-path: polygon(48%  48%,  52% 48% , 52% 52%, 48% 52%);
+        $epaisseur : 15%;
+        clip-path: polygon( (-$epaisseur)  150%-$epaisseur,  150%-$epaisseur (-$epaisseur) , 150%+$epaisseur $epaisseur, $epaisseur 150%+$epaisseur);
+       
     }
 }
 @keyframes fermeX2{
@@ -111,6 +129,7 @@ La barre du millieu
     }
     100%{
         clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+       
     }
 }
 

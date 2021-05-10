@@ -775,25 +775,26 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100vw;
+  width: 100%;
+  z-index: 11000;
+  /* MENU PRINICPAL*/
 }
 
 .main-navigation ul {
   display: none;
-  position: absolute;
+  /* position : absolute; */
   width: 100%;
   list-style: none;
   margin: 0;
   padding-left: 0;
   background-color: #000;
   text-align: left;
-  z-index: 99999;
   /* fin du sub-menu */
+  /*SOUS MENU DU MENU*/
 }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 100%;
   transition: left .5s;
@@ -803,14 +804,14 @@ textarea {
 }
 
 .main-navigation ul ul li:hover {
-  /**AJOUT***/
+  /* 	transform: translateX(20px);
+				transition: transform .25s; */
   width: auto;
   overflow-x: hidden;
 }
 
 .main-navigation ul ul li:hover a {
   padding-left: 20px;
-  /**AJOUT***/
   transform: translateX(20px);
   transition: transform .25s;
 }
@@ -822,17 +823,6 @@ textarea {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: 0;
-}
-
-.main-navigation ul li {
-  position: relative;
-  background-color: #34d19d;
-  flex: 1;
-  /* prend tout le padding du a*/
-}
-
-.main-navigation ul li:hover, .main-navigation ul li.focus {
-  background-color: #359172;
 }
 
 .main-navigation ul a[href='#']::after {
@@ -851,10 +841,25 @@ textarea {
   content: "\25C7";
 }
 
+.main-navigation ul a[href='#']:hover {
+  background-color: #0ac486;
+}
+
+.main-navigation li {
+  position: relative;
+  background-color: #34d19d;
+  flex: 1;
+  /* prend tout le padding du a*/
+}
+
+.main-navigation li:hover, .main-navigation li.focus {
+  background-color: #359172;
+}
+
 .main-navigation a {
   display: block;
   text-decoration: none;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -862,6 +867,8 @@ Bouton burger
 ------------------------------------------------------------------------------*/
 .menu-toggle {
   padding: 0;
+  transition: transform .25s;
+  transform: scale(1);
   border: 0;
 }
 
@@ -879,11 +886,15 @@ Bouton burger
   transform: scale(0.99);
 }
 
-/*
-.main-navigation.toggled .menu-toggle{
-	transform : rotate(90deg);
+.main-navigation.toggled .menu-toggle {
+  transform: scale(1.5) rotate(90deg);
+  margin-bottom: 20px;
 }
-*/
+
+.menu-toggle {
+  margin-left: 25px;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -899,6 +910,7 @@ menu tablet
   .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
+    position: static;
     justify-content: space-around;
   }
   .main-navigation.toggled ul a[href='#']::after,
@@ -907,26 +919,17 @@ menu tablet
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: block;
+    position: absolute;
+    width: auto;
+    /*permet de s'adapter la dernière session 6*/
+    height: auto;
+    /* pas de marge en bas */
     width: 400px;
-    animation: anim-sous-menu .5s both;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
     display: none;
-  }
-}
-
-@keyframes anim-sous-menu {
-  0% {
-    opacity: 0;
-    transform: translateX(0) translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
   }
 }
 
@@ -1450,6 +1453,24 @@ section.nouvelles section.boite h2 {
   }
 }
 
+/********ANONCE ***********/
+#annonce {
+  background-color: cadetblue;
+  height: auto;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 50px;
+}
+
+#annonce p {
+  display: flex;
+  align-content: center;
+  margin-left: 30px;
+}
+
 /* local carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1591,10 +1612,10 @@ Le bouton buger
 ----------------------------------------------------------------------------------------- */
 #burger {
   position: relative;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
   overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 #burger div {
@@ -1611,12 +1632,12 @@ Le bouton buger
 }
 
 #burger div:nth-of-type(2) {
-  background-color: #3d79da;
+  background-color: #f1f509;
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
 }
 
 #burger div:nth-of-type(3) {
-  background-color: #dab03d;
+  background-color: #360ad8;
   clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
 }
 
@@ -1628,7 +1649,7 @@ La barre du haut
     clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
   }
   100% {
-    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
+    clip-path: polygon(-20% 70%, 70% -20%, 110% 20%, 20% 110%);
   }
 }
 
@@ -1657,7 +1678,7 @@ La barre du bas
     clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
   }
   100% {
-    clip-path: polygon(-8% 92%, 92% -8%, 108% 8%, 8% 108%);
+    clip-path: polygon(-10% 50%, 50% -10%, 70% 10%, 10% 70%);
   }
 }
 
@@ -1686,7 +1707,7 @@ La barre du millieu
     clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
   }
   100% {
-    clip-path: polygon(48% 48%, 52% 48%, 52% 52%, 48% 52%);
+    clip-path: polygon(-15% 135%, 135% -15%, 165% 15%, 15% 165%);
   }
 }
 

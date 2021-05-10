@@ -1,93 +1,119 @@
 .main-navigation {
 	display: block;
-	width: 100vw;
-	
+	width: 100%;
+	z-index: 11000;
 
+	/* MENU PRINICPAL*/
 	ul {
 		display: none;
-		position : absolute;
+		/* position : absolute; */
 		width : 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		background-color: #000;
-		text-align : left;
-		z-index: 99999;
+		text-align: left;
+		//border: 4px solid orange;
+		
+	
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			//float: left;
 			position: absolute;
 			top: 100%;
-			transition : left .5s;
+			transition: left .5s;
 			left: -999em;
 			z-index: 99999;
+			//background-color: aqua;
 			background-color: rgb(53, 145, 114);
+		
 
-			li:hover {
-				/**AJOUT***/
+			li:hover{
+			/* 	transform: translateX(20px);
+				transition: transform .25s; */
 				width: auto;
 				overflow-x: hidden;
 				a{
-				padding-left : 20px;
-					/**AJOUT***/
+				padding-left: 20px;
 				transform: translateX(20px);
 				transition: transform .25s;
-				}
+			} 
+			
+			//position:absolute;
+			
+
 			}
+
 
 			a {
 				width: 100%;
+			
 			}
+
+
 		} /* fin du sub-menu */
 
+		/*SOUS MENU DU MENU*/
 		li:hover > ul,
 		li.focus > ul {
 			left: 0;
+			//border: 2px solid red;
 		
 		}
-		li {
-			position: relative;
-			background-color: rgb(52, 209, 157);
-
-			flex : 1; /* prend tout le padding du a*/
-	
-			&:hover,
-			&.focus {
-				background-color: rgb(53, 145, 114);
-				
-			}
-		}
-
-
-		a[href='#']::after {
-			position : absolute;
-			content : "\25C6";
+		a[href='#']::after{
+			position: absolute;
+			content: "\25C6";
 			width: 100%;
 			height: 100%;
 			top:25%;
 			bottom: 0;
-			left :90%;
-			right:0;
-		}
-		li.focus a[href='#']::after,
-		a[href='#']:hover::after
-		{
-			content : "\25C7";
+			left: 90%;
+			right: 0;
 		}
 
+		li.focus a[href='#']::after,
+		a[href='#']:hover::after{
+			content: "\25C7";
+			
+		}
+
+		a[href='#']:hover{
+			
+			background-color: rgb(10, 196, 134);
+		}
 
 	}
 
+	li {
+		position: relative;
+		background-color: rgb(52, 209, 157);
+		
+		
+		flex : 1; /* prend tout le padding du a*/
+	
+		&:hover,
+		&.focus {
+			background-color: rgb(53, 145, 114);
+			
+		}
 
+		
+	
+
+	}
+
+	li:last-of-type{
+
+	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		padding: .5rem;
+		padding: 1rem;
+		
 	}
 
-
-
+	
 
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -102,6 +128,8 @@ Bouton burger
 	padding :0;
 //	transition : transform .25s;
 //	transform : rotate(0deg);
+	transition: transform .25s; //animation du burger
+	transform: scale(1); //animation du burger
 	border : 0;
 }
 .menu-toggle:hover,
@@ -118,15 +146,23 @@ Bouton burger
     transform: scale(0.99);
 }
 
-/*
-.main-navigation.toggled .menu-toggle{
-	transform : rotate(90deg);
-}
-*/
 
+.main-navigation.toggled .menu-toggle{
+	
+	transform: scale(1.5) rotate(90deg);
+	//background-color: rgb(0, 0, 0);
+	margin-bottom: 20px;
+	
+}
+
+.menu-toggle{
+	margin-left: 25px; // mettre espace de côté du burger
+	//background-color: rgb(224, 147, 147);//fond couleur burger survol
+}
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+
 }
 /* ---------------------------------------------------------------------------
 menu tablet
@@ -139,38 +175,32 @@ menu tablet
 	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
-		//position : static;
+		position : static;
 		justify-content: space-around;
 		a[href='#']::after{
-			display : none;
+			display: none;
+			
 		}
 
-		li:hover ul{
-			display :flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			width : 400px;
-			animation : anim-sous-menu .5s both;
-		}
+	li:hover ul {
+		display: block;
+		position: absolute;
+		//width: 250px;
+		width: auto;/*permet de s'adapter la dernière session 6*/
+		height: auto;/* pas de marge en bas */
+		width: 400px;	
+	}
 
-	ul {
-		display : none;
+	ul{
+		display: none;
 		
-	}	
+		
+	}
+
+
+		
 	}
 }
-
-@keyframes anim-sous-menu {
-	0%{
-		opacity : 0;
-		transform : translateX(0) translateY(100px);
-	}
-	100%{
-		opacity: 1;
-		transform : translateX(0) translateY(0);
-	}
-}
-
 
 .comment-navigation,
 .posts-navigation,
@@ -193,3 +223,4 @@ menu tablet
 		flex: 1 0 50%;
 	}
 }
+

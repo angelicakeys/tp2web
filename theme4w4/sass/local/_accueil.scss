@@ -279,3 +279,24 @@ section.nouvelles{
        // margin-left: 70px;
     } */
 }
+
+/********ANONCE ***********/
+
+#annonce{
+    background-color: cadetblue;
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //gap: 10px;
+    width: 70%;
+    margin: 50px;
+
+    p{
+        display: flex;
+        align-content: center;
+        margin-left: 30px;
+    }
+    
+}

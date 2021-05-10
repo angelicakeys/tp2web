@@ -4,16 +4,22 @@
     console.log(bouton.id) 
 
     let nouvelles = document.querySelector('.nouvelles section');
+    let annonce = document.getElementById('annonce');
     //bouton.addEventListener('mousedown',monAjax);
-    window.addEventListener('load',monAjax)
+    window.addEventListener('load',function(){
+        monAjax( monObjJS.URLDomaine +'/wp-json/wp/v2/posts?categories=33',nouvelles)
+        monAjax(monObjJS.URLDomaine +'/wp-json/wp/v2/posts?categories=35',annonce )
 
-    function monAjax()
+    })
+
+    function monAjax(requete,elmDom)
     {
 
    
        let maRequete = new XMLHttpRequest();
        console.log(maRequete)
-       maRequete.open('GET', monObjJS.URLDomaine +'/wp-json/wp/v2/posts?categories=33');
+       maRequete.open('GET',requete);
+       maRequete.open('GET',requete );
        maRequete.onload = function () {
            console.log(maRequete)
            if (maRequete.status >= 200 && maRequete.status < 400) {
@@ -25,7 +31,8 @@
                /*  chaine += '<p>' + elm.date + '<p>'  */
                /*  '<p class= "date">' */
                }
-               nouvelles.innerHTML = chaine;
+               elmDom.innerHTML = chaine;
+              
             }
          else {
                console.log('La connexion est faite mais il y a une erreur')
@@ -46,7 +53,7 @@
             "title" : document.querySelector('.admin-rapid [name="title"]').value,
             "content" : document.querySelector('.admin-rapid [name="content"]').value,
             "status" : "publish",
-            "categories" : [33]
+            "categories" : [35]
         }
         console.log(JSON.stringify(monArticle))
         let creerArticle = new XMLHttpRequest()
