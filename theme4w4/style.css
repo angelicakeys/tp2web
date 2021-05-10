@@ -1453,22 +1453,28 @@ section.nouvelles section.boite h2 {
   }
 }
 
-/********ANONCE ***********/
+/******** ANNONCE ***********/
 #annonce {
   background-color: cadetblue;
-  height: auto;
+  height: 10vh;
   padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  margin: 50px;
+}
+
+#annonce h2 {
+  padding-top: 0;
+  margin: 0;
 }
 
 #annonce p {
   display: flex;
   align-content: center;
+  justify-content: center;
   margin-left: 30px;
+  padding-top: 10px;
+  color: white;
 }
 
 /* local carrousel
@@ -1807,7 +1813,12 @@ La barre du millieu
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 10%;
+  gap: 30%;
+}
+
+.site-footer #categories-3 a li {
+  display: flex;
+  flex-direction: column;
 }
 
 /* local formulaire
@@ -1842,7 +1853,6 @@ La barre du millieu
 
 .entry-header, .page-header {
   color: turquoise;
-  padding-top: 40px;
   /* width: 50%; */
 }
 

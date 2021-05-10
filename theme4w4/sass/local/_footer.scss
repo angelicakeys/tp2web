@@ -10,6 +10,11 @@
        display: flex;
        flex-direction: row;
        justify-content: space-around;
-       gap: 10%;
+       gap: 30%;
+   }
+
+   #categories-3 a li{
+       display: flex;
+       flex-direction: column;
    }
 }

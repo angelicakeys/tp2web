@@ -16,7 +16,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-			
+			<section id="annonce"></section>
 			<h1 class="page-title">Cours </h1> 
 				<?php
 				/* the_archive_title( '<h1 class="page-title">', '</h1>' ); */
@@ -62,7 +62,7 @@ get_header();
 				$precedent = $tPropriété['typeCours'];
 			endwhile;?>
 			</section> <!-- fin section cours -->
-			<section id="annonce"></section>
+		
 			<?php if (current_user_can('administrator')) : ?> 
 			<!-- section formulaire d'une catégorie nouvelle -->
 			<section class="admin-rapid">
