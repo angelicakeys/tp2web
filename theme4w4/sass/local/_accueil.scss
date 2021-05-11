@@ -228,14 +228,31 @@ Liste des blocs de cours par type_de_cours
 
 section.admin-rapid{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     flex-direction:column;
     width: 50%;
-    margin-left: 80px;
-   
+    margin-left: 25%;
+    gap: 10px;
     border: 4px solid rgb(65, 65, 148);
+    border-radius: 35px 90px 35px 90px;
+    background-color: rgb(161, 223, 194);
+    #bout-rapide{
+       margin-bottom: 4%;
+    }
     #bout-rapide:hover{
         background-color: rgb(134, 179, 192);
+    }
+    h3{
+        border-bottom:3px solid salmon;  
+    }
+    input{
+        width: 70%;
+    }
+    textarea{
+        align-items: center;
+        width: 70%;
     }
 }
 section.nouvelles{
