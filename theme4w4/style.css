@@ -775,26 +775,25 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
-  z-index: 11000;
-  /* MENU PRINICPAL*/
+  width: 100vw;
 }
 
 .main-navigation ul {
   display: none;
-  /* position : absolute; */
+  position: absolute;
   width: 100%;
   list-style: none;
   margin: 0;
   padding-left: 0;
   background-color: #000;
   text-align: left;
+  z-index: 99999;
   /* fin du sub-menu */
-  /*SOUS MENU DU MENU*/
 }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
   position: absolute;
   top: 100%;
   transition: left .5s;
@@ -804,14 +803,14 @@ textarea {
 }
 
 .main-navigation ul ul li:hover {
-  /* 	transform: translateX(20px);
-				transition: transform .25s; */
+  /**AJOUT***/
   width: auto;
   overflow-x: hidden;
 }
 
 .main-navigation ul ul li:hover a {
   padding-left: 20px;
+  /**AJOUT***/
   transform: translateX(20px);
   transition: transform .25s;
 }
@@ -823,6 +822,17 @@ textarea {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: 0;
+}
+
+.main-navigation ul li {
+  position: relative;
+  background-color: #34d19d;
+  flex: 1;
+  /* prend tout le padding du a*/
+}
+
+.main-navigation ul li:hover, .main-navigation ul li.focus {
+  background-color: #359172;
 }
 
 .main-navigation ul a[href='#']::after {
@@ -841,25 +851,10 @@ textarea {
   content: "\25C7";
 }
 
-.main-navigation ul a[href='#']:hover {
-  background-color: #0ac486;
-}
-
-.main-navigation li {
-  position: relative;
-  background-color: #34d19d;
-  flex: 1;
-  /* prend tout le padding du a*/
-}
-
-.main-navigation li:hover, .main-navigation li.focus {
-  background-color: #359172;
-}
-
 .main-navigation a {
   display: block;
   text-decoration: none;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -867,8 +862,6 @@ Bouton burger
 ------------------------------------------------------------------------------*/
 .menu-toggle {
   padding: 0;
-  transition: transform .25s;
-  transform: scale(1);
   border: 0;
 }
 
@@ -886,15 +879,11 @@ Bouton burger
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: scale(1.5) rotate(90deg);
-  margin-bottom: 20px;
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
 }
-
-.menu-toggle {
-  margin-left: 25px;
-}
-
+*/
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -910,7 +899,6 @@ menu tablet
   .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
-    position: static;
     justify-content: space-around;
   }
   .main-navigation.toggled ul a[href='#']::after,
@@ -919,17 +907,26 @@ menu tablet
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
-    display: block;
-    position: absolute;
-    width: auto;
-    /*permet de s'adapter la dernière session 6*/
-    height: auto;
-    /* pas de marge en bas */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 400px;
+    animation: anim-sous-menu .5s both;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
     display: none;
+  }
+}
+
+@keyframes anim-sous-menu {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -1243,54 +1240,59 @@ Liste des blocs de cours par type_de_cours
   /*****section class carrousel ******/
 }
 
+.home .cours h2:first-child {
+  margin-top: 0px;
+  padding: 0px;
+  color: black;
+  background-color: none;
+}
+
 .home .cours h2 {
   display: flex;
   justify-content: center;
   color: white;
+  background-color: #1da0a0;
   align-items: center;
   margin-top: 70px;
   padding: 40px;
   /*variatons couleurs dans le header des sections*/
+  /*  &:nth-of-type(1){
+        margin-top: 0px;
+        padding: 0px;
+        color: black;
+        } */
+  /*  &:nth-of-type(2){
+        background-color: rgb(29, 160, 160);
+        }
+     */
+  /*  &:nth-of-type(3){
+        background-color: rgb(160, 49, 29);
+        }
+    
+        &:nth-of-type(4){
+            background-color: rgb(119, 14, 75);
+        }
+    
+        &:nth-of-type(5){
+            background-color: rgb(23, 18, 102);
+        }
+
+        &:nth-of-type(6){
+            background-color: rgb(219, 230, 68);
+        }
+
+        &:nth-of-type(7){
+            background-color: rgb(240, 113, 10);
+        }
+        &:nth-of-type(8){
+            background-color: rgb(131, 8, 125);
+        } */
 }
 
 @media (min-width: 1200px) {
   .home .cours h2 {
     align-items: center;
   }
-}
-
-.home .cours h2:nth-of-type(1) {
-  margin-top: 0px;
-  padding: 0px;
-  color: black;
-}
-
-.home .cours h2:nth-of-type(2) {
-  background-color: #1da0a0;
-}
-
-.home .cours h2:nth-of-type(3) {
-  background-color: #a0311d;
-}
-
-.home .cours h2:nth-of-type(4) {
-  background-color: #770e4b;
-}
-
-.home .cours h2:nth-of-type(5) {
-  background-color: #171266;
-}
-
-.home .cours h2:nth-of-type(6) {
-  background-color: #dbe644;
-}
-
-.home .cours h2:nth-of-type(7) {
-  background-color: #f0710a;
-}
-
-.home .cours h2:nth-of-type(8) {
-  background-color: #83087d;
 }
 
 .home .cours section.bloc {
@@ -1457,7 +1459,8 @@ section.nouvelles section.boite h2 {
 #annonce {
   background-color: cadetblue;
   height: 10vh;
-  padding-top: 0;
+  padding: 70px;
+  /*Ajout*/
   display: flex;
   justify-content: center;
   align-items: center;
