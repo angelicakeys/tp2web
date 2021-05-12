@@ -53,9 +53,12 @@ get_header();
 				<?php if (in_array($tPropriété['typeCours'], ["Web", "Jeu"]) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
-						elseif(($tPropriété['typeCours']== 'Projets') || ($tPropriété['typeCours']== 'Personnel')): 
-						get_template_part( 'template-parts/content', 'galerie' ); 
-						
+						/* elseif(($tPropriété['typeCours']== 'Projets') || ($tPropriété['typeCours']== 'Personnel')): 
+						get_template_part( 'template-parts/content', 'galerie' );  */
+						elseif($tPropriété['typeCours']== 'Projets'):
+						get_template_part( 'template-parts/content', 'galerie' );
+						elseif($tPropriété['typeCours']== 'Personnel'):	
+						get_template_part( 'template-parts/content', 'galerie-perso' );	
 						else :		
 						get_template_part( 'template-parts/content', 'cours-article' ); 
 				endif;	
@@ -119,7 +122,8 @@ function convertirTableau(&$tPropriété)
 				return ('class="galerie"');
 			}
 			elseif($type == 'Personnel'){
-				return ('class="galerie-perso"');
+				/* return ('class="galerie-perso"'); */
+				return ('class="galerie-perso2"');
 			}
 			else{
 				return ('class="bloc"');
