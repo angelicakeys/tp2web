@@ -1971,7 +1971,6 @@ La barre du millieu
 
 .container {
   /***************/
-  padding: 1em 0;
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -1988,7 +1987,6 @@ La barre du millieu
   justify-content: center;
   color: #1a1a1a;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .content {
@@ -2020,6 +2018,7 @@ La barre du millieu
 .content:hover .content-overlay {
   /***************/
   opacity: 1;
+  animation: animProjet .50s both;
 }
 
 .content-details {
@@ -2035,6 +2034,10 @@ La barre du millieu
   transition: all 0.3s ease-in-out 0s;
 }
 
+.content-imageHover {
+  width: 100%;
+}
+
 .content:hover .content-details {
   /***************/
   top: 50%;
@@ -2045,5 +2048,14 @@ La barre du millieu
 .fadeIn-bottom {
   /***************/
   top: 80%;
+}
+
+@keyframes animProjet {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

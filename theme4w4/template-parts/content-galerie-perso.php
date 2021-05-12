@@ -24,7 +24,7 @@
   <?php the_post_thumbnail('thumbnail'); ?>
       <div class="content-overlay"><h3 class="content-title"><a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?></a></h3></div>
       <div class="content-imageHover" >
-      <div class="content-details">
+      <div class="content-details fadeIn-bottom">
       
     </div>
   </div>

@@ -1,4 +1,8 @@
 
+
+
+
+
 .galerie-perso2{
     display: flex;
     justify-content: center;
@@ -8,16 +12,17 @@
 }
 
 .container{ /***************/
-    padding: 1em 0;
+    //padding: 1em 0;
     //float: left;
     display: flex;
     justify-content: center;
     gap: 10%;
     //width: 50%;
   }
-  .content-title{
+  .content-title {
       display: flex;
       justify-content: center;
+     
       
   }
  
@@ -25,9 +30,10 @@
   .container .title{ /***************/
     display: flex;
     justify-content: center;
+ 
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
   }
 
   .content {   /***************/
@@ -59,6 +65,7 @@
 
   .content:hover .content-overlay{ /***************/
     opacity: 1;
+    animation: animProjet .50s both;
     
   }
   
@@ -80,7 +87,9 @@
     transition: all 0.3s ease-in-out 0s;
   }
 
-
+  .content-imageHover{
+      width: 100%;
+  }
   .content:hover .content-details{ /***************/
     top: 50%;
     left: 50%;
@@ -89,4 +98,14 @@
 
   .fadeIn-bottom{/***************/
     top: 80%;
+  }
+
+  @keyframes animProjet{
+
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(100px);
+    }
   }
