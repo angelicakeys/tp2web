@@ -70,3 +70,29 @@ a {
 		}
 	}
 }
+
+/**** AJOUT VARIABLE COULEUR DANS FOOTER *****/
+.site-footer{
+	a{
+		color: $color__linksite-footer;
+
+		&:visited {
+			color: $color__linksite-footer-visited;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__linksite-footer-hover;
+		}
+
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+}
