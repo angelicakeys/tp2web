@@ -96,3 +96,30 @@ a {
 		}
 	}
 }
+
+/**** AJOUT VARIABLE COULEUR DANS MAIN *****/
+
+.site-main{
+	a{
+		color: $color__linksite-main;
+
+		&:visited {
+			color: $color__linksite-main-visited;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__linksite-main-hover;
+		}
+
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+}

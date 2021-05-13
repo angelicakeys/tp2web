@@ -52,6 +52,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* couleur menu principal */
 /* couleur .site-title */
 /* couleur .site-title */
+/* couleur .site-main */
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -607,6 +608,27 @@ a:hover, a:active {
 }
 
 .site-footer a:hover, .site-footer a:active {
+  outline: 0;
+}
+
+/**** AJOUT VARIABLE COULEUR DANS MAIN *****/
+.site-main a {
+  color: #0fb8a2;
+}
+
+.site-main a:visited {
+  color: #1332be;
+}
+
+.site-main a:hover, .site-main a:focus, .site-main a:active {
+  color: #050838;
+}
+
+.site-main a:focus {
+  outline: none;
+}
+
+.site-main a:hover, .site-main a:active {
   outline: 0;
 }
 
