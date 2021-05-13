@@ -1882,7 +1882,14 @@ La barre du millieu
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 30%;
+  /*  gap: 30%; */
+  gap: 5%;
+}
+
+@media (min-width: 1200px) {
+  .site-footer .site-info {
+    gap: 30%;
+  }
 }
 
 .site-footer #categories-3 a li {
