@@ -2020,6 +2020,11 @@ La barre du millieu
   gap: 40px;
 }
 
+.galerie-perso2 a {
+  color: white;
+  text-decoration: none;
+}
+
 .container {
   /***************/
   display: flex;

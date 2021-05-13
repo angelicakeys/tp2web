@@ -9,6 +9,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
+    a{
+        color:white;
+        text-decoration:none;
+    }
 }
 
 .container{ /***************/
@@ -109,3 +113,5 @@
         transform: translateY(100px);
     }
   }
+
+
