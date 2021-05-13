@@ -617,7 +617,7 @@ a:hover, a:active {
 }
 
 .site-main a:visited {
-  color: #1332be;
+  color: white;
 }
 
 .site-main a:hover, .site-main a:focus, .site-main a:active {
@@ -1284,14 +1284,12 @@ Liste des blocs de cours par type_de_cours
   /*****section class carrousel ******/
 }
 
-.home .cours h2:first-child {
-  margin-top: 0px;
-  padding: 0px;
-  color: black;
-  background-color: none;
+.home .cours > h2:nth-of-type(1) {
+  background-color: transparent;
+  color: blanchedalmond;
 }
 
-.home .cours h2 {
+.home .cours > h2 {
   display: flex;
   justify-content: center;
   color: white;
@@ -1334,9 +1332,13 @@ Liste des blocs de cours par type_de_cours
 }
 
 @media (min-width: 1200px) {
-  .home .cours h2 {
+  .home .cours > h2 {
     align-items: center;
   }
+}
+
+.home .cours > h2 h2:nth-of-type(1) {
+  background-color: none;
 }
 
 .home .cours section.bloc {
@@ -1489,6 +1491,11 @@ section.nouvelles {
 
 section.nouvelles #bout_nouvelles {
   display: none;
+}
+
+section.nouvelles h2 {
+  background-color: blueviolet;
+  width: 100%;
 }
 
 section.nouvelles section.boite {
@@ -1810,13 +1817,24 @@ La barre du millieu
   justify-content: center;
 }
 
+.titleProjets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+  height: 30vh;
+}
+
 .galerie {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
-  margin: 150px;
+}
+
+.galerie a {
+  text-decoration: none;
 }
 
 .galerie .flip-card {

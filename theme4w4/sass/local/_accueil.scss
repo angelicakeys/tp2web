@@ -59,6 +59,7 @@ body.home::after{
 /**AJOUT ESPACE ENTRE LE TITRE ET LE MENU*****/
 h1.page-title{
     margin-top: 50px;
+   
 }
 /* --------------------------------------------------------------------------------------- 
 Liste des blocs de cours par type_de_cours
@@ -66,14 +67,13 @@ Liste des blocs de cours par type_de_cours
 .home .cours {
     display : flex;
     flex-direction: column;
-    h2:first-child{
-     
-        margin-top: 0px;
-        padding: 0px;
-        color: black;
-        background-color: none;
-        }
-    h2 {
+   
+    
+    & > h2:nth-of-type(1){
+        background-color: transparent;
+        color: blanchedalmond;
+    }
+    & > h2 {
         display: flex;
         justify-content: center;
         color:white;
@@ -81,9 +81,15 @@ Liste des blocs de cours par type_de_cours
         align-items: center;
         margin-top: 70px;
         padding: 40px;
+
+      
         @include desktop {
           align-items: center;
         } 
+        h2:nth-of-type(1){
+            background-color: none;
+        }
+        
         /*variatons couleurs dans le header des sections*/
        /*  &:nth-of-type(1){
         margin-top: 0px;
@@ -123,7 +129,7 @@ Liste des blocs de cours par type_de_cours
     /*****section class carrousel ******/
    
     section.bloc {
-       
+      
         display : flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -142,7 +148,7 @@ Liste des blocs de cours par type_de_cours
            /*  padding  : 1rem; */
             text-align : center;
             box-shadow: 5px 10px 15px rgb(123, 153, 189);
-         
+           
             p {
                 margin: .4rem;
                 font-size: 1rem;
@@ -259,6 +265,11 @@ section.nouvelles{
    #bout_nouvelles{
        display: none;
    } 
+   h2{
+       background-color: blueviolet;
+       width: 100%;
+   }
+   
    display: flex;
    flex-direction: row;
    justify-content: center;
