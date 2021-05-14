@@ -71,7 +71,8 @@ Liste des blocs de cours par type_de_cours
     
     & > h2:nth-of-type(1){
         background-color: transparent;
-        color: blanchedalmond;
+        color: black;
+        margin: 0;
     }
     & > h2 {
         display: flex;
@@ -266,10 +267,12 @@ section.nouvelles{
        display: none;
    } 
    h2{
-       background-color: blueviolet;
+       //background-color: rgb(11, 156, 156);
+       background-color: rgb(30, 16, 109);
+       color: white;
        width: 100%;
    }
-   
+
    display: flex;
    flex-direction: row;
    justify-content: center;

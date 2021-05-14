@@ -1286,7 +1286,8 @@ Liste des blocs de cours par type_de_cours
 
 .home .cours > h2:nth-of-type(1) {
   background-color: transparent;
-  color: blanchedalmond;
+  color: black;
+  margin: 0;
 }
 
 .home .cours > h2 {
@@ -1494,7 +1495,8 @@ section.nouvelles #bout_nouvelles {
 }
 
 section.nouvelles h2 {
-  background-color: blueviolet;
+  background-color: #1e106d;
+  color: white;
   width: 100%;
 }
 

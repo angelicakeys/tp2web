@@ -24,7 +24,7 @@
 	
 	</header><!-- .entry-header -->
 
-	<?php theme4w4_post_thumbnail(); ?>
+	<?php the_post_thumbnail('full'); ?>
 
 	<div class="entry-content">
 		<?php
@@ -43,12 +43,7 @@
 			)
 		);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'theme4w4' ),
-				'after'  => '</div>',
-			)
-		);
+	
 		?>
 	</div><!-- .entry-content -->
 

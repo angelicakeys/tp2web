@@ -15,7 +15,7 @@
 <article class="flip-card">
     <div class="flip-card-inner">
         <div class="flip-card-front">
-        <?php the_post_thumbnail('thumbnail'); ?>
+        <?php the_post_thumbnail('category-thumbprojet'); ?>
         
     </div>
 

@@ -12,14 +12,15 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-/* if ( function_exists( 'add_theme_support' ) ) {
+if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
    set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
  
     // additional image sizes
     // delete the next line if you do not need additional image sizes
-    add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
- } */
+    add_image_size( 'category-thumb', 300, 300, true ); // 300 pixels wide (and unlimited height)
+	add_image_size( 'category-thumbprojet', 500, 500, true );
+ }
 
 if ( ! function_exists( 'theme4w4_setup' ) ) :
 	/**
