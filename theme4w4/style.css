@@ -1808,6 +1808,7 @@ La barre du millieu
   display: flex;
   justify-content: center;
   padding-bottom: 10%;
+  padding-top: 5%;
 }
 
 .nomfooter a {
@@ -1831,8 +1832,7 @@ section.admin-rapid {
   margin-top: 10%;
   margin-bottom: 10%;
   gap: 10px;
-  border: 4px solid #414194;
-  background-color: #a1dfc2;
+  background-color: #1da0a0;
 }
 
 section.admin-rapid #bout-rapide {
@@ -1840,13 +1840,13 @@ section.admin-rapid #bout-rapide {
 }
 
 section.admin-rapid #bout-rapide:hover {
-  background-color: #86b3c0;
+  background-color: #34d19d;
 }
 
 section.admin-rapid .enteteformulaire {
   display: flex;
   justify-content: center;
-  background-color: salmon;
+  background-color: #34d19d;
   width: 100%;
 }
 
@@ -1883,7 +1883,7 @@ section.nouvelles {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: aquamarine;
+  background-color: #84a8d1;
   margin-top: 70px;
   margin: 0px;
 }
@@ -1893,8 +1893,8 @@ section.nouvelles #bout_nouvelles {
 }
 
 section.nouvelles h2 {
-  background-color: #1e106d;
-  color: white;
+  border-bottom: 3px solid #12437a;
+  color: #12437a;
   width: 100%;
 }
 
