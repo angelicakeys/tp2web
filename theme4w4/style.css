@@ -2019,7 +2019,6 @@ La barre du millieu
 
 .galerie-perso .flip-card-back {
   background-color: aquamarine;
-  color: white;
   transform: rotateY(180deg);
 }
 
@@ -2078,16 +2077,20 @@ La barre du millieu
 }
 
 .content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 2%;
+  padding-bottom: 2%;
   font-size: 12px;
+  margin: 5%;
 }
 
 .content .content-overlay {
   /***************/
-  background: rgba(15, 226, 156, 0.425);
+  background-color: #16c28e;
   position: absolute;
-  height: 99%;
+  height: 100%;
   width: 100%;
   left: 0;
   top: 0;
@@ -2136,8 +2139,14 @@ La barre du millieu
   0% {
     transform: translateY(-100px);
   }
+  50% {
+    transform: translateY(80px);
+  }
+  /*   70%{
+        transform: translateY(50px);
+    } */
   100% {
-    transform: translateY(100px);
+    transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
