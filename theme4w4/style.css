@@ -1442,119 +1442,6 @@ Liste des blocs de cours par type_de_cours
   }
 }
 
-/**************SECTION NOUVELLES**********************************************/
-section.admin-rapid {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
-  gap: 10px;
-  border: 4px solid #414194;
-  border-radius: 35px 90px 35px 90px;
-  background-color: #a1dfc2;
-}
-
-section.admin-rapid #bout-rapide {
-  margin-bottom: 4%;
-}
-
-section.admin-rapid #bout-rapide:hover {
-  background-color: #86b3c0;
-}
-
-section.admin-rapid h3 {
-  border-bottom: 3px solid salmon;
-}
-
-section.admin-rapid input {
-  width: 70%;
-}
-
-section.admin-rapid textarea {
-  align-items: center;
-  width: 70%;
-}
-
-section.nouvelles {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: aquamarine;
-  margin-top: 70px;
-  margin: 0px;
-  /*   .blocks-gallery-item{
-       // margin-left: 70px;
-    } */
-}
-
-section.nouvelles #bout_nouvelles {
-  display: none;
-}
-
-section.nouvelles h2 {
-  background-color: #1e106d;
-  color: white;
-  width: 100%;
-}
-
-section.nouvelles section.boite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  margin: 90px;
-  /*     .wp-blocks-columns{
-        display: flex;
-         flex-direction: row;
-         .wp-blocks-column{
-           
-             flex-direction: row;
-             p{
-                 flex-direction: column;
-             }
-         } */
-  /*  } */
-}
-
-section.nouvelles section.boite h2 {
-  background-color: none;
-}
-
-@media (min-width: 1200px) {
-  section.nouvelles section.boite {
-    width: 50vw;
-  }
-}
-
-/******** ANNONCE ***********/
-#annonce {
-  background-color: cadetblue;
-  height: 10vh;
-  padding: 70px;
-  /*Ajout*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#annonce h2 {
-  padding-top: 0;
-  margin: 0;
-}
-
-#annonce p {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-left: 30px;
-  padding-top: 10px;
-  color: white;
-}
-
 /* local carrousel
 --------------------------------------------- */
 .carrousel {
@@ -1908,7 +1795,7 @@ La barre du millieu
 
 @media (min-width: 1200px) {
   .site-footer .site-info {
-    gap: 30%;
+    justify-content: center;
   }
 }
 
@@ -1917,8 +1804,144 @@ La barre du millieu
   flex-direction: column;
 }
 
+.nomfooter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.nomfooter a {
+  padding-left: 2%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 /* local formulaire
 --------------------------------------------- */
+/**************SECTION NOUVELLES**********************************************/
+section.admin-rapid {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  gap: 10px;
+  border: 4px solid #414194;
+  background-color: #a1dfc2;
+}
+
+section.admin-rapid #bout-rapide {
+  margin-bottom: 4%;
+}
+
+section.admin-rapid #bout-rapide:hover {
+  background-color: #86b3c0;
+}
+
+section.admin-rapid .enteteformulaire {
+  display: flex;
+  justify-content: center;
+  background-color: salmon;
+  width: 100%;
+}
+
+section.admin-rapid h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: clamp(0.6rem, -0.875rem + 8.333vw, 1rem);
+  padding: 5%;
+}
+
+@media (min-width: 1200px) {
+  section.admin-rapid h3 {
+    padding: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  section.admin-rapid h3 {
+    padding: 0;
+  }
+}
+
+section.admin-rapid input {
+  width: 70%;
+}
+
+section.admin-rapid textarea {
+  align-items: center;
+  width: 70%;
+}
+
+section.nouvelles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: aquamarine;
+  margin-top: 70px;
+  margin: 0px;
+}
+
+section.nouvelles #bout_nouvelles {
+  display: none;
+}
+
+section.nouvelles h2 {
+  background-color: #1e106d;
+  color: white;
+  width: 100%;
+}
+
+section.nouvelles section.boite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 90px;
+}
+
+section.nouvelles section.boite h2 {
+  background-color: none;
+}
+
+@media (min-width: 1200px) {
+  section.nouvelles section.boite {
+    width: 50vw;
+  }
+}
+
+/******** ANNONCE ***********/
+#annonce {
+  background-color: cadetblue;
+  height: 10vh;
+  padding: 70px;
+  /*Ajout*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#annonce h2 {
+  padding-top: 0;
+  margin: 0;
+}
+
+#annonce p {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: 30px;
+  padding-top: 10px;
+  color: white;
+}
+
 /* local page
 --------------------------------------------- */
 .site-branding {
@@ -2081,7 +2104,6 @@ La barre du millieu
   justify-content: center;
   align-items: center;
   color: white;
-  padding-bottom: 2%;
   font-size: 12px;
   margin: 5%;
 }

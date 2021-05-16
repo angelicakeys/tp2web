@@ -69,7 +69,7 @@ get_header();
 			<?php if (current_user_can('administrator')) : ?> 
 			<!-- section formulaire d'une catégorie nouvelle -->
 			<section class="admin-rapid">
-			<h3>Ajouter une article de catégorie "Annonce" </h3>
+			<div class="enteteformulaire"><h3>Ajouter une article de catégorie "Annonce" </h3> </div>
 			<input type="text" name="title" placeholder="Titre">
 			<textarea name="content" placeholder="Contenu"></textarea>
 			<button id='bout-rapide'> Créer une Annonce </button>
