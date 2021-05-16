@@ -2077,6 +2077,12 @@ La barre du millieu
   overflow: hidden;
 }
 
+.content p {
+  color: white;
+  padding: 2%;
+  font-size: 12px;
+}
+
 .content .content-overlay {
   /***************/
   background: rgba(15, 226, 156, 0.425);

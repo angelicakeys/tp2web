@@ -19,7 +19,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     // additional image sizes
     // delete the next line if you do not need additional image sizes
     add_image_size( 'category-thumb', 300, 300, true ); // 300 pixels wide (and unlimited height)
-	add_image_size( 'category-thumbprojet', 500, 500, true );
+	//add_image_size( 'category-thumbprojet', 500, 500, true );
  }
 
 if ( ! function_exists( 'theme4w4_setup' ) ) :
