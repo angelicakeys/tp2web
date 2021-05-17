@@ -53,6 +53,7 @@ get_header();
 				<?php if (in_array($tPropriété['typeCours'], ["Web", "Jeu"]) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
+						
 						/* elseif(($tPropriété['typeCours']== 'Projets') || ($tPropriété['typeCours']== 'Personnel')): 
 						get_template_part( 'template-parts/content', 'galerie' );  */
 						elseif($tPropriété['typeCours']== 'Projets'):

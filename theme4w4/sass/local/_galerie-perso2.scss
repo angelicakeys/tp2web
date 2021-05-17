@@ -1,8 +1,4 @@
 
-
-
-
-
 .galerie-perso2{
     display: flex;
     justify-content: center;
@@ -16,12 +12,11 @@
 }
 
 .container{ /***************/
-    //padding: 1em 0;
-    //float: left;
+  
     display: flex;
     justify-content: center;
     gap: 10%;
-    //width: 50%;
+   
   }
   .content-title {
       display: flex;
@@ -34,15 +29,13 @@
   .container .title{ /***************/
     display: flex;
     justify-content: center;
- 
     color: #1a1a1a;
     text-align: center;
-    //margin-bottom: 10px;
+  
   }
 
   .content {   /***************/
     position: relative;
-  /*   width: 90%; */
     max-width: 400px;
     display: flex;
     justify-content: flex-start;
@@ -54,16 +47,15 @@
         justify-content: center;
         align-items: center;
         color: white;
-        //padding-bottom:2%;
         font-size: 12px;
-       margin: 5%;
+        margin: 5%;
     }
   
   }
 
   .content .content-overlay { /***************/
    
-    //background:rgba(15, 226, 156, 0.425);
+   
     background-color: rgb(22, 194, 142);
     position: absolute;
     height: 100%;
@@ -129,9 +121,7 @@
         transform: translateY(80px);
     }
 
-  /*   70%{
-        transform: translateY(50px);
-    } */
+
     100%{
         transform: translateY(0px);
         //transform: translateY(50px);

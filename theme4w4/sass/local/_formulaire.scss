@@ -99,14 +99,20 @@ section.nouvelles{
 #annonce{
     background-color: cadetblue;
     height: 10vh;
-    //padding-top: 0;
-    //padding-top: 30px;
     padding: 70px;/*Ajout*/
     display: flex;
     justify-content: center;
     
     align-items: center;
-  
+  @include desktop{
+    padding: 70px;
+    margin: 0;
+  }
+
+  @include tablet{
+    padding: 70px;
+    margin: 0;
+  }
    
     h2{
         padding-top: 0;

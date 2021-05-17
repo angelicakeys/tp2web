@@ -1,5 +1,5 @@
 
-.archive-description{
+.archive-description p{
     display: flex;
     justify-content: center;
 }
@@ -8,8 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blanchedalmond;
     height: 30vh;
+    margin: 0;
+    background-color: rgb(14, 122, 117);
     
 }
 
@@ -19,9 +20,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    //margin:150px;
+    align-items: center;
+    margin:150px;
     a{
         text-decoration: none;
+        font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"},0.6rem);
+        margin: 5px;
     }
     
     
@@ -30,7 +34,7 @@
         width: 150px;
         height: 150px;
         perspective: 10000px;
-        margin-left: 40px;
+        //margin-left: 40px;
     }
     
     .flip-card-inner{

@@ -800,16 +800,11 @@ textarea {
 .site-footer, #colophon {
   display: grid;
   grid-area: "footer";
-  /* justify-content: center; */
-  /* 	flex: 1; */
   background-color: #4a85d3;
   width: 100vw;
   height: auto;
   color: black;
   margin: 0;
-  /* .site-info{
-		padding-top: 15px;
-	} */
 }
 
 /*--------------------------------------------------------------
@@ -1298,38 +1293,6 @@ Liste des blocs de cours par type_de_cours
   align-items: center;
   margin-top: 70px;
   padding: 40px;
-  /*variatons couleurs dans le header des sections*/
-  /*  &:nth-of-type(1){
-        margin-top: 0px;
-        padding: 0px;
-        color: black;
-        } */
-  /*  &:nth-of-type(2){
-        background-color: rgb(29, 160, 160);
-        }
-     */
-  /*  &:nth-of-type(3){
-        background-color: rgb(160, 49, 29);
-        }
-    
-        &:nth-of-type(4){
-            background-color: rgb(119, 14, 75);
-        }
-    
-        &:nth-of-type(5){
-            background-color: rgb(23, 18, 102);
-        }
-
-        &:nth-of-type(6){
-            background-color: rgb(219, 230, 68);
-        }
-
-        &:nth-of-type(7){
-            background-color: rgb(240, 113, 10);
-        }
-        &:nth-of-type(8){
-            background-color: rgb(131, 8, 125);
-        } */
 }
 
 @media (min-width: 1200px) {
@@ -1355,11 +1318,8 @@ Liste des blocs de cours par type_de_cours
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /*  width : 95%; */
   width: 70%;
-  /*  margin : 1%; */
   margin: 10px;
-  /*  padding  : 1rem; */
   text-align: center;
   box-shadow: 5px 10px 15px #7b99bd;
 }
@@ -1420,6 +1380,7 @@ Liste des blocs de cours par type_de_cours
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: white;
 }
 
 /*animation des hovers par section de cours*/
@@ -1546,6 +1507,12 @@ Liste des blocs de cours par type_de_cours
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(3) {
   background-color: #00aeff;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  display: none;
 }
 
 .ctrl-carrousel {
@@ -1701,7 +1668,7 @@ La barre du millieu
 
 /* local galerie
 --------------------------------------------- */
-.archive-description {
+.archive-description p {
   display: flex;
   justify-content: center;
 }
@@ -1710,8 +1677,9 @@ La barre du millieu
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blanchedalmond;
   height: 30vh;
+  margin: 0;
+  background-color: #0e7a75;
 }
 
 .galerie {
@@ -1720,10 +1688,14 @@ La barre du millieu
   flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
+  align-items: center;
+  margin: 150px;
 }
 
 .galerie a {
   text-decoration: none;
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 0.6rem);
+  margin: 5px;
 }
 
 .galerie .flip-card {
@@ -1731,7 +1703,6 @@ La barre du millieu
   width: 150px;
   height: 150px;
   perspective: 10000px;
-  margin-left: 40px;
 }
 
 .galerie .flip-card-inner {
@@ -1928,6 +1899,20 @@ section.nouvelles section.boite h2 {
   align-items: center;
 }
 
+@media (min-width: 1200px) {
+  #annonce {
+    padding: 70px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  #annonce {
+    padding: 70px;
+    margin: 0;
+  }
+}
+
 #annonce h2 {
   padding-top: 0;
   margin: 0;
@@ -1972,7 +1957,12 @@ section.nouvelles section.boite h2 {
 
 .entry-header, .page-header {
   color: turquoise;
-  /* width: 50%; */
+}
+
+.entry-header .enteteProjets, .page-header .enteteProjets {
+  display: flex;
+  justify-content: center;
+  background-color: #0e7a75;
 }
 
 .entry-header h1, .page-header h1 {
@@ -2090,7 +2080,6 @@ section.nouvelles section.boite h2 {
 .content {
   /***************/
   position: relative;
-  /*   width: 90%; */
   max-width: 400px;
   display: flex;
   justify-content: flex-start;
@@ -2164,9 +2153,6 @@ section.nouvelles section.boite h2 {
   50% {
     transform: translateY(80px);
   }
-  /*   70%{
-        transform: translateY(50px);
-    } */
   100% {
     transform: translateY(0px);
   }

@@ -28,8 +28,14 @@
 
 .entry-header, .page-header{
     color: turquoise;
-    //padding-top: 40px;
-    /* width: 50%; */
+    
+    .enteteProjets{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(14, 122, 117);
+   
+    }
+
     h1{
         font-size: 3rem;
         
@@ -44,3 +50,4 @@ p{
     width: 70%;
 }
 }
+

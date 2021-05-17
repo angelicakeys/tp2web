@@ -32,15 +32,10 @@
 .site-footer, #colophon{
 	display: grid;
 	grid-area: "footer";
-	/* justify-content: center; */
-/* 	flex: 1; */
 	background-color: rgb(74, 133, 211);
 	width: 100vw;
 	height: auto;
 	color: black;
 	margin: 0;
-	/* .site-info{
-		padding-top: 15px;
-	} */
 	
 }

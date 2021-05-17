@@ -14,6 +14,7 @@
 			for (const bt of bout)
 			{
 				bt.value = k++;
+			
 				console.log(bt.value)
 				bt.addEventListener('mousedown', function() {
 					elmCarrousel.style.transform = "translateX(" + (-this.value*100) + "vw)"

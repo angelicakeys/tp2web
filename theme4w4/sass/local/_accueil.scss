@@ -48,9 +48,6 @@ body.home::after{
 } 
 
 
-
-
-
 .home .entry-header {
     font-size : clamp(.6rem, #{"-0.875rem + 8.333vw"},3rem);
 }
@@ -91,39 +88,7 @@ Liste des blocs de cours par type_de_cours
             background-color: none;
         }
         
-        /*variatons couleurs dans le header des sections*/
-       /*  &:nth-of-type(1){
-        margin-top: 0px;
-        padding: 0px;
-        color: black;
-        } */
     
-       /*  &:nth-of-type(2){
-        background-color: rgb(29, 160, 160);
-        }
-     */
-       /*  &:nth-of-type(3){
-        background-color: rgb(160, 49, 29);
-        }
-    
-        &:nth-of-type(4){
-            background-color: rgb(119, 14, 75);
-        }
-    
-        &:nth-of-type(5){
-            background-color: rgb(23, 18, 102);
-        }
-
-        &:nth-of-type(6){
-            background-color: rgb(219, 230, 68);
-        }
-
-        &:nth-of-type(7){
-            background-color: rgb(240, 113, 10);
-        }
-        &:nth-of-type(8){
-            background-color: rgb(131, 8, 125);
-        } */
         
     }
 
@@ -141,12 +106,8 @@ Liste des blocs de cours par type_de_cours
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            //border : 1px solid #aaa;
-           /*  width : 95%; */
-           width: 70%;
-           /*  margin : 1%; */
-           margin: 10px;
-           /*  padding  : 1rem; */
+            width: 70%;
+            margin: 10px;
             text-align : center;
             box-shadow: 5px 10px 15px rgb(123, 153, 189);
            
@@ -206,6 +167,7 @@ Liste des blocs de cours par type_de_cours
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      color: white;
    }
 
 }

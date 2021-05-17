@@ -69,14 +69,21 @@
    
 }
 
+.radio{
+    display: inline-flex;
+    align-items: center;
+    display: none;
+}
 .ctrl-carrousel {
     display : flex;
     justify-content: center;
     width : 100vw;
     padding-top: 40px;
-    .rad-carrousel {
-        display : block;
-        margin : .5rem .8rem .5rem .8rem; 
+   
+    .rad-carrousel{
+    display : block;
+    margin : .5rem .8rem .5rem .8rem; 
+ 
 
     /* ajuste le nombre des boutons du carrousel selon la taille de l'écran*/
     @include desktop{
